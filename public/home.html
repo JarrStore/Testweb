@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+ <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> 
+ 
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+<link href='https://fonts.googleapis.com/css?family=Oxanium' rel='stylesheet'>
+<title>Fast Pedia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); 
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url("https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+
+* {
+font-family: 'Oxanium';
+user-select: none;
+}
+
+:root {
+--primary: #2196F3;
+--dark-primary: #2196F3;
+--rumahhtml: #0A1931;
+--my-color: #2196F3;
+--my-blur: #f1f1f1; 
+--animate-duration: 200ms;
+}
+.body {
+background-color: aliceblue;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.main {
+background: white;
+padding: -30px;
+display: flex;
+border-radius: 10px;
+margin-top: 10px;
+border: 2px solid rgba(0, 0, 0, 0.1)
+}
+
+.main .bg {
+top: 0;
+left: 0;
+z-index: -1;
+width: 100%;
+height: 50px;
+position: relative;
+background: #2196F3;
+border-bottom-left-radius: 100% 20%;
+border-bottom-right-radius: 100% 20%;
+}
+
+.button {
+width: 100%;
+display: flex;
+padding: 10px;
+column-gap: 10px;
+background: white;
+align-items: center;
+border-radius: 10px;
+justify-content: space-between;
+}
+
+.button button {
+width: 100%;
+border: none;
+padding: 7px;
+background: aliceblue;
+font-weight: 500;
+border-radius: 10px;
+}
+
+.button button.active {
+color: white;
+background: #2196F3;
+}
+.my-headers{
+position: absolute;
+top: 5;
+left: 0;
+width: 100%;
+z-index: 1;
+background: var(--my-color);
+height: 120px;
+}
+.profil {
+color: white;
+display: flex;
+position: relative;
+}
+
+.profil img {
+width: 45px;
+margin-left: 15px;
+margin-top: 10px;
+height: 45px;
+border-radius: 10px;
+border: 2px solid white;
+}
+
+.imgSlider{
+float: left;
+}
+
+.profil .profil-text {
+margin-left: 10px;
+margin-top: 10px;
+}
+
+.profil .profil-text h6 {
+font-size: 16px;
+}
+
+.profil .profil-text p {
+font-size: 13px;
+margin-bottom: 10px;
+}
+
+.profil .profil-text span {
+padding: 7px;
+font-size: 11px;
+border-radius: 10px;
+border: 1px solid white;
+}
+.page{ display: none;}
+.karakter{
+position: absolute;
+margin-top: 40px;
+right: 25px;
+width: 55px !important;
+height: auto !important;
+border: none !important;
+border-radius: 0px !important;
+}
+input {
+border: none;
+-webkit-transition: 0.5s;
+transition: 0.5s;
+outline: none;
+}
+.karakter{
+position: absolute;
+top: -10px;
+right: -10px;
+width: 100px !important;
+height: auto !important;
+border: none !important;
+border-radius: 0px !important;
+}
+.fa-bell {
+top: 5px;
+right: 10px;
+font-size: 20px;
+position: absolute;
+animation: swing 2s ease infinite;
+}
+.box-saldos {
+background: white;
+padding: 10px;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+margin-top: 10px;
+}
+
+.saldo-users {
+display: flex;
+color: #2196F3;
+align-items: center;
+}
+
+.nominals {
+background: aliceblue;
+width: 100%;
+height: 60px;
+padding: 10px;
+padding-bottom: 7px;
+padding-top: 5px;
+border-radius: 10px 0 0 0px;
+position: relative;
+}
+
+.nominals p {
+font-size: 12px;
+margin-bottom: 0px;
+margin: 0px;
+}
+
+h5 {
+font-size: 14px;
+margin: 0px;
+font-weight: bold;
+color: #333;
+margin:25px px 10px 0px;
+}
+
+.poin {
+font-size: 10px;
+background: white;
+padding-left: 12px;
+padding-right: 10px;
+padding-top: 2px;
+padding-bottom: 2px;
+border-radius: 10px 10px 0px 0px;
+position: absolute;
+bottom: 0px;
+right: 10px;
+color: var(--my-color);
+font-weight: bold;
+}
+
+.btn-topup {
+display: flex;
+align-items: center;
+margin-right: 5px;
+margin-left: -1px;
+}
+
+.btn-topup button {
+border: none;
+padding: 18px;
+border-radius: 0 10px 10px 0;
+background: #F2AA3C;
+text-align: center;
+}
+
+.btn-topup img {
+width: 30px;
+margin-top: -5px;
+}
+
+.btn-topup p {
+font-size: 11px;
+margin-bottom: 0px;
+margin-top: 0px;
+font-weight: bold;
+}
+.kontol {
+align-items: center;
+margin-right: 5px;
+margin-left: 90px;
+}
+
+.kontol button {
+border: none;
+padding: 0px;
+background: transparent;
+text-align: center;
+}
+
+.kontol img {
+width: 30px;
+margin-top: 5px;
+}
+
+.text{
+width: 100%;
+}
+.text p{
+margin-bottom: 0px;
+margin-top: 0px;
+font-size: 14px;
+color: black;
+}
+.text h5{
+font-size: 14px;
+font-weight: bold;
+color: black;
+margin-bottom: 0px;
+}
+
+.space {
+width: 15px;
+}
+
+#blurredText {
+transition: filter 0.3s ease;
+}
+
+.blur {
+filter: blur(10px);
+/* Ganti angka 5px sesuai dengan tingkat blur yang diinginkan */
+}
+
+.flex {
+display: flex;
+color: #2196F3;
+align-items: center;
+}
+
+.fa-sync-alt {
+margin-left: 10px;
+font-size: 14px;
+animation: rotation 3s linear infinite;
+color: var(--my-color);
+}
+
+@keyframes rotation {
+0% {
+transform: rotate(0deg);
+}
+
+100% {
+transform: rotate(360deg);
+}
+}
+
+.hidden {
+display: none;
+}
+
+.w-full {
+width: 100%;
+}
+
+.toggle {
+border: none;
+margin-right: 0px;
+color: #2196F3;
+font-size: 18px;
+background: transparent;
+}
+
+.my-box {
+background: white;
+border: 1px solid rgba(235, 235, 235, 0.718);
+box-shadow: rgb(220, 220, 233) 1px 2px 3px;
+border-radius: 10px;
+margin-top: 10px;
+}
+.head-box{
+padding: 10px;
+padding-top: 15px;
+padding-bottom: 15px;
+background: var(--my-color);
+border-radius: 10px 10px 0px 0px;
+text-align: center;
+ }
+ .head-box h5{
+font-size: 12px;
+font-weight: 700;
+color: white;
+margin: 0;
+ }
+ .head-box p{
+font-size: 15px;
+font-weight: 600;
+color: white;
+margin: 0;
+ }
+ .flex{
+display: flex;
+ }
+ .text-box{
+padding-left: 20px;
+padding-right: 20px;
+margin-top: 15px;
+ }
+ .text-box img{
+width: 30px;
+margin-right: 15px;
+ }
+
+.my-boxx {
+background: white;
+border: 1px solid rgba(235, 235, 235, 0.718);
+box-shadow: rgb(220, 220, 233) 1px 2px 3px;
+border-radius: 10px;
+margin-top: 10px;
+}
+
+.box-menu {
+background: white;
+padding-bottom: 5px;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+p{
+font-size: 11px;
+font-weight: 400;
+font-weight: bold;
+color: #000;
+}
+r{
+font-size: 12px;
+font-weight: 400;
+font-weight: bold;
+color: #494949;
+}
+.grid-container {
+list-style: none;
+margin: 0;
+padding: 0px;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+justify-items: center;
+text-align: center;
+margin-top: 10px;
+}
+.menu-list2 {
+border: none;
+outline: none;
+background: transparent;
+}
+
+.text-box img{
+} 
+
+.menu-list2 img {
+width: 40px;
+background: #2196F3;
+padding: 0px !important;
+border-radius: 10px;
+margin-top: 10px;
+}
+
+/* CSS untuk mode tampilan grid */
+.grid-container {
+list-style: none;
+margin: 0;
+padding: 0px;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+justify-items: center;
+position: relative;
+top: 0px;
+}
+
+
+
+}
+
+.menu-list img {
+width: 50px;
+padding: 4px;
+border-radius: 10px;
+
+}
+
+.menu-* img {
+width: 42px;
+background: rgb(69, 165, 245);
+background: #2196F3
+padding: 5px;
+border-radius: 10px;
+
+
+}
+.menu-list p {
+font-size: 12px;
+color: white;
+margin-bottom: 5px;
+margin-top: 4px;
+animation: fade-in 2s linear;
+}
+.menu-walet {
+border: none;
+background: transparent;
+}
+.menu-walet2 {
+border: none;
+background: transparent;
+}
+
+.menu-walet {
+border: none;
+background: transparent;
+
+}
+.menu-walet2 img {
+width: 42px;
+background: rgb(69, 165, 245);
+background: #2196F3;
+margin-top: 10px;
+padding: 5px;
+border-radius: 10px;
+animation: bounce-in 2s ease;
+}
+.menu-walet img {
+width: 42px;
+background: rgb(69, 165, 245);
+background: #2196F3;
+padding: 5px;
+border-radius: 10px;
+animation: bounce-in 2s ease;
+
+}
+
+.menu-walet p {
+font-size: 11px;
+color: #494949;
+margin-bottom: 10px;
+margin-top: 3px;
+animation: fade-in 2s linear;
+}
+.card,.card-body{
+border: none;
+outline: none;
+padding: none;
+box-shadow: none;
+}
+.wrap {
+width: 100%;
+background: aliceblue;
+padding-bottom: 0px;
+margin-top: 8px;
+border-radius: 10px 10px 0px 0px;
+position: relative;
+border: none;
+}
+
+.wrap .active-grid-circle {
+display: grid;
+width: 100%;
+
+}
+
+.wrap .nav-circle {
+display: grid;
+width: 100%;
+height: 2px;
+border-radius: 10px;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+top: 0px;
+left: 0%;
+z-index: 1;
+display: none;
+align-items: center;
+}
+.bg-s{
+padding-left: 10px;
+padding-right: 10px;
+margin-bottom: -10px;
+}
+.icontf {
+width: 40px;
+float: left;
+margin-right: 10px;
+}
+.nav-grid {
+width: 100%;
+padding: 0;
+margin: 0;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+.nav-grid {
+width: 100%;
+padding: 0;
+margin: 0;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-grid .nav-grid-items-codingasik {
+padding: 16px 10px;
+padding-bottom: 0px !important;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+.nav-grid .nav-grid-items-codingasik .icon {
+color: gray;
+font-size: 13px;
+position: relative;
+z-index: 11;
+}
+
+.nav-grid .nav-grid-items-codingasik.active .icon {
+color: black;
+font-weight: bold;
+position: relative;
+z-index: 11;
+}
+
+.grid-item-active {
+display: flex !important;
+align-items: center;
+justify-content: center;
+-webkit-animation: zoomIn .255s cubic-bezier(0.46, 0.03, 0.21, 0.93);
+animation: zoomIn .255s cubic-bezier(0.46, 0.03, 0.21, 0.93);
+}
+.container.theme-dark .wrap {
+background: #212121;
+}
+
+.container.theme-dark .nav-grid .nav-grid-items .icon {
+color: #eee;
+}
+
+.container.theme-dark .nav-grid .nav-grid-items.active .icon {
+color: var(--my-color);
+}
+
+.tabcontent {
+display: none;
+border-top: none;
+padding: 10px;
+animation: slideInRight var(--animate-duration) forwards;
+}
+
+.tabcontent.hide {
+animation: slideInLeft var(--animate-duration) forwards;
+}
+.my-bg {
+background-color: #2196F3
+}
+
+
+.bg-head {
+background-color: #2196F3;
+padding: 10px;
+height: 150px;
+border-radius: 0 0 0px 0px
+}
+</style>
+</head>
+<body>
+
+<!-- Modal -->
+
+<style>
+body {
+background-color: aliceblue;
+}
+</style>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #f1f2f3;
+        font-family: Arial;        color:#000;
+    }
+    *{
+        box-sizing: border-box;
+    }
+.jasaedithtml-header{
+    background-image: linear-gradient(to bottom,#2196F3 ,#2196F3);
+    width:100%;
+    height: 40px;
+    color: white;
+    padding:5px 10px 0px 10px;
+    font-weight: bold;
+}
+
+.topup{
+    float:right;
+    margin-top: -35px;
+    border: none;
+    margin-right: 8px;
+    border-radius: 100px;
+    background: transparent;
+    border: 1px solid #f00000;
+    font-size: 14px;
+   color: #f00000;
+   width: 80px;
+   font-weight: bold;
+}
+/* CSS MENU HEADER */
+.jasaedithtml-menu{
+                list-style: none;
+                margin: 0;
+                padding:0;
+                display: grid;
+                border: right;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+                position: relative;
+                top:-px;
+                border-radius: 10px;
+                background: transparent;
+              }
+.tablink{
+   width: auto;
+   margin-top: 25px;
+   margin-left: 2%;
+  margin-right: 2%;
+  background-color: transparent;
+  border: none;
+  height:70px;
+  color:#000;
+  font-size: 12px;
+  font-weight: 450;
+  margin-bottom: 10px;
+}
+.tablink img{
+  width: 50px;
+  height:50px;
+  border: 0px solid #fff;
+  border-radius: 15px;
+  color:#000;
+}
+.tablink img:hover{
+    color:#000;
+    border-radius: 12px;
+    background-color: transparent ;
+}
+.tablink p{
+ font-size:12px;
+ margin-top: 5px;
+ opacity: 0.5px;
+ color:#000;
+}
+/* CSS TEXT BERJALAN */
+.toa{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0px;
+    margin-top: -10px;
+    background-color:transparent;
+}
+marquee{
+    float: right;
+    width: 93%;
+    font-size: 13px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+/* MENU PRODUK 2 */
+.menu{
+    margin-top:35px;
+    border-left:2px solid #666;
+    background-color: transparent;
+    width:94%;
+    margin-left: 3%;
+    padding:0px 5px 30px 5px;
+    border-radius: 10px ;
+    border-top:2px solid #666;
+    position:absolut;
+}
+.nama-menu{
+    margin-top: -5px;
+    
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    color:orange;
+    margin-left: 10px;
+    margin-bottom: -65px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu-akun-2{
+    font-weight: 500;
+    font-size: 14px;
+padding:10px;
+    color:#fff;
+    background-color: transparent;
+}
+.menu-akun:hover{
+    font-weight: 500;
+    font-size: 14px;
+    border-left: 5px solid #2196f3;
+}
+.menu-akun img{
+    width: 25px;
+    margin-right: 5px;
+}
+a{text-decoration:none;}
+.jasaedithtml{
+    border-radius: 15px;
+    border:5px solid red;
+}
+
+.bottom-panel {
+    width:100%;
+   margin-left: 0%;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 5px;
+    justify-items: center;
+    border-radius: 0px;
+    
+    
+    padding: 10px 10px 5px 10px;
+    
+    margin-bottom: 15px;
+    background-color:transparent;
+}
+.bottom-panel p{
+    color:#777;
+    font-weight: bold;
+}
+.panel {
+    width:100%;
+   margin-left: 0%;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 5px;
+    justify-items: center;
+    border-radius: 0px;
+    
+    
+    padding: 10px 10px 5px 10px;
+    
+    margin-bottom: 15px;
+    background-color:transparent;
+}
+.panel p{
+    color:#777;
+    font-weight: bold;
+}
+
+
+
+.tabcontent.active1 {
+    position: static;
+    display: block;
+    transform: translateX(0) scale(1);
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.link-bottom-panel {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+    color: #777;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: Arial;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.link-bottom-panel:hover {
+    text-decoration: none;
+}
+
+.icon-bottom-panel {
+    height: 48px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #fffff;
+       padding :0px;
+    border-top :2px solid #fff;
+        border-right:2px solid #fff;
+        border-bottom: 2px solid #ccc;
+        border-left: 2px solid #ccc; 
+}
+.link-panel {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.link-panel:hover {
+    text-decoration: none;
+}
+
+.icon-panel {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #ffffff;
+       padding :0px;
+    border-top :2px solid #fff;
+        border-right:2px solid #fff;
+        border-bottom: 2px solid #fff;
+        border-left: 2px solid #fff; 
+}
+.tab {
+    width:88%;
+    height:47px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    border-right: 0px solid #fff;
+    border-left : 0px solid #ccc;
+    border-top : 0px solid #fff;
+    background-color: transparent;
+    margin-left: 6%;
+    padding :4px 5px 6px 0px;
+    
+    margin-top:0px;
+    color:#777;
+} 
+.icon img{
+width: 50px;
+margin-right: 10px;
+}
+.tab button.active {
+    background-image: linear-gradient(to right,#2196F3 ,#000);
+    color: #777;
+    border-radius: 3px;
+    border-bottom: 3px solid #000;
+}
+.tab button {
+    background-color: transparent;
+    float: left;
+    height:25px;
+    border: none;
+    width: 29%;
+    font-weight: 800;
+    background: :transparent;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #777;
+    box-shadow: -2px 5px 7px #ccc;
+    font-size: 11px;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 5px 5px;
+    font-family: 'Verdana', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    }
+
+
+.tabcontent {
+    border-top: none;
+    margin: 20px 0;
+    transition: 400ms ease-in-out;
+    transform: translateX(100%) scale(0);
+    left: 100%;
+    position: absolute;
+}
+
+.tabcontent.active {
+    position: static;
+    display: block;
+    transform: translateX(0) scale(1);
+    flex-shrink: 0;
+    width: 100%;
+}
+.w3-button{
+  border:none;
+  display:inline-block;
+  padding:0px 0px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:#fff;
+  background-color:#fff;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap; 
+  margin-left: 2%;
+  font-size: 12px;
+  }
+
+.w3-btn:hover{
+box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.1),0 6px 20px 0 rgba(0,0,0,0.19)}
+
+.w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.w3-disabled,.w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+.w3-red,.w3-hover-red:hover{color:#fff!important;background-image: linear-gradient(to bottom,#2196F3 ,#2196F3);important;border:2px solid #000;height:25px;border-radius:5px 5px 0x 0px;}
+
+.w3-bar-item{padding:0px 16px;float:left;width:auto;display:block;outline:0;margin-left: 0%;border-bottom: 3px solid #222;color:#fff;}
+.text-brand{
+    width:50%;
+    font-size: 14px;
+    color:#eaeaea;
+    margin-right: 5%;
+    float:right;
+    margin-top:-12px; 
+    font-weight: 450;
+    text-align:right;
+}
+box-profil{
+    position:relative;
+        }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  </div>
+</div>
+<div class="bg-head" >
+<div class="box-profil">
+<div class="profil-info">
+<header>    
+<div class="profil">
+<img src="https://sitegenius.cloud/ib/cdPRsfUlPe.jpg" alt="">
+<div class="profil-text">
+<h6 id="namaUserDisplay">Hi,{{nama_user}}</h6>
+<span>Kasih Ratting Terbaik mu <i class="fa-solid fa-share"
+onclick="window.location.href='#'"></i>
+</div>
+</div>
+<!-- icon lonceng -->
+</div>
+</header>
+</div>
+</div>
+</div>
+<div style="margin-top: -75px;"></div>
+<!-- NEW BOX SALDO -->
+<div  style="top: -55px;padding: 10px;">
+
+<div class="box-saldos">
+<div class="saldo-users">
+<div class="nominals">
+<div class="flex">
+<p class="w-full">Saldo Saya</p>
+<button onclick="toggleBlur()" class="toggle">
+<span id="icon1" class="icon">
+<i class="fas fa-toggle-on" style="color: red;"></i>
+</span>
+<span id="icon2" class="icon hidden">
+<i class="fad fa-toggle-off" style="color: #2196F3;"></i>
+</span>
+</button>
+</div>
+<div class="flex" style="margin-top: -5px;color:#2196F3;">
+<h5 id="rumahhtmlsaldo">0</h5>
+<a href="https://fastpediakuu.webtoko.net/refresh_saldo">
+<i class="fas fa-sync-alt"></i>
+</a>
+</div>
+<span class="poin">
+Point : <font id="rumahhtmlpoin">0</font>
+</span>
+</div>
+<div class="btn-topup">
+    <a href="https://fastpediakuu.webtoko.net/digital/294655">
+<button id="iconButton">
+<img src="https://sitegenius.cloud/ib/ZT0HYooLkN.png" alt=""
+id="iconImg">
+</button></a>
+</div>
+</div>
+ <div class="panel">
+<a href="https://fastpediakuu.webtoko.net/akun/?page=topup" class="link-panel">
+            <img src="https://sitegenius.cloud/ib/qU6uUhHJiN.png" alt="jasaedithtml" class="icon-panel" /> Top Up </a>
+            <a href="https://fastpediakuu.webtoko.net/digital/313878" class="link-panel">
+            <img src="https://sitegenius.cloud/ib/R2UuSa83Ed.png" alt="jasaedithtml" class="icon-panel" /> Transfer </a>
+            
+            <a href="https://fastpediakuu.webtoko.net/digital/291956" class="link-panel">
+            <img src="https://sitegenius.cloud/ib/2CpvIaio9L.png" alt="jasaedithtml" class="icon-panel" /> Merchant </a>
+            
+            <a href="https://fastpediakuu.webtoko.net/digital/313879" class="link-panel">
+            <img src="https://sitegenius.cloud/ib/Vn0kIa7utE.png" alt="jasaedithtml" class="icon-panel" /> Bantuan </a>
+</div>
+<hr>
+ <div class="d-flex align-items-center p-2 pt-0">
+<img src="https://sitegenius.cloud/ib/LaQEF5RZbs.png" width="22"
+class="menu-list">
+<i><marquee class="d-flex align-self-center ms-2 text-dark"
+style="font-size: 12px; color: #ffffff font-weight: 600;">Dilarang Transaksi Pada Jam 23:00 - 00.30 WIB Dikarenakan Maintenance Harian, Akan Otomatis Gagal Jika Transaksi Pada Jam Tersebut ❗</marquee></i>
+
+</div>
+</div>
+</div>
+</div>
+<!-- End -->
+
+<!-- 📮📮📮📮 -->
+
+ <div style="padding:0px 13px 0px 13px;height:140px;border-radius:px;margin-top: 15px;width:100%;padding:0px 0px 10px 0px;position:relative;margin-top:5px;>
+<div id="carouselExampleInterval" class="carousel slide p-0" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                   <img class="siletku" src="https://sitegenius.cloud/ib/S9UU9nUT7g.png" style="background:#fff;;background-size: cover;background-repeat:norepeat;margin-bottom: 10px;
+    border-radius: 10px;margin-left:2.5%;border:10px solid #fff;border:10px solid #fff;
+    border-bottom: 10px solid #fff; width:95%;height:200px;" alt="0">
+             </div>
+             <div class="carousel-item" data-bs-interval="2000">
+                <img class="siletku" src="https://sitegenius.cloud/ib/DI1y0bvcfv.png" style="background-image: url('https://i.ibb.co.com/M6V52FC/images-2024-02-04-T191834-254xg.jpg');background-size: cover;background-repeat:norepeat;margin-bottom: 10px;
+    border-radius: 10px;margin-left:2.5%;border:10px solid #fff;border:10px solid #fff;
+    border-bottom: 10px solid #fff; width:95%;height:200px;" alt="0">
+               </div>
+             <div class="carousel-item" data-bs-interval="2000">
+                <img class="siletku" src="https://sitegenius.cloud/ib/hFajVqEAYJ.png" style="background-image: url('https://i.ibb.co.com/M6V52FC/images-2024-02-04-T191834-254xg.jpg');background-size: cover;background-repeat:norepeat;margin-bottom: 10px;
+    border-radius: 10px;margin-left:2.5%;border:10px solid #fff;border:10px solid #fff;
+    border-bottom: 10px solid #fff; width:95%;height:200px;" alt="0">
+               </div>
+             <div class="carousel-item" data-bs-interval="2000">
+                <img class="siletku" src="https://sitegenius.cloud/ib/pzSMagEZIV.png" style="background-image: url('https://i.ibb.co.com/M6V52FC/images-2024-02-04-T191834-254xg.jpg');background-size: cover;background-repeat:norepeat;margin-bottom: 10px;
+    border-radius: 10px;margin-left:2.5%;border:10px solid #fff;border:10px solid #fff;
+    border-bottom: 10px solid #fff; width:95%;height:200px;" alt="0">
+               </div>
+       
+               
+                <!-- -->
+    
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+               
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+               
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </div>
+
+
+
+
+<!-- bagian menu 4 -->
+<p style="margin-top: 100px;font-size: 12px;position:absolute;text-align:left;margin-left:7%;width:90%;">BEST SELLER ✨</p>
+
+ <div class="bottom-panel" style="background: #fff;width:95%;;margin-left:2.5%;border-radius: 15px;margin-top:85px;padding:15px;padding-top: 40px;">
+     
+      <a href="https://fastpediakuu.webtoko.net/digital/299625" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/83df8346d7b9f2989770c.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Pencairan Qris </a>
+            
+<a href="https://fastpediakuu.webtoko.net/digital/302948" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/83df8346d7b9f2989770c.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Scan Qris </a>
+
+            
+<a href="https://fastpediakuu.webtoko.net/digital/291954" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/d0fd0ef1a251400e2c86c.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Dana </a>
+
+<a href="https://fastpediakuu.webtoko.net/digital/298425" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/e09ace8a362d149f5f676.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Token PLN </a>
+</div>
+
+
+
+<div style="padding-left: 9px;padding-right: 9px; margin-top:10px;">
+<div class="my-box mt-3">
+
+  <div style="margin-left: %;width:90%;height;25px;border-radius:20px;" class="tab">
+
+    <button class="w3-bar-item w3-button tablink w3-red " onclick="openCity(event,'Paris')">Isi Ulang</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'London')">Tagihan</button>
+     <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Solo')">Lainnya</button>
+
+  </div>
+<!-- TAB PPOB -->
+  <div id="Paris" class="w3-container city">
+        <section class="bottom-panel">
+<a href="https://fastpediakuu.webtoko.net/digital/303944" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/86abf5ff31849399c8c86.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Pulsa </a>
+            
+            
+<a href="https://fastpediakuu.webtoko.net/digital/298425" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/e09ace8a362d149f5f676.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Token PLN </a>
+
+<a href="https://fastpediakuu.webtoko.net/digital/294655" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/60070905c361f3935a87f.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Axis </a>
+
+
+<a href="https://fastpediakuu.webtoko.net/digital/294655" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/bb40293ba5a74e573b36e.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Indosat </a>
+
+
+<a href="https://fastpediakuu.webtoko.net/digital/294655" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/3926f26d1b415c823278c.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Smartfren </a>
+            
+         <a href="https://fastpediakuu.webtoko.net/digital/292222" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/7747c88f8cb374519654f.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Telkomsel </a>  
+
+
+  <a href="https://fastpediakuu.webtoko.net/digital/294655" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/d89bce45fff0af262fcaf.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Three</a>  
+
+ <a href="https://fastpediakuu.webtoko.net/digital/303910" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/f7c4cd1cf8d362d14f7b0.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Xl </a>
+               <a href="https://fastpediakuu.webtoko.net/digital/314577" class="link-bottom-panel">
+            <img src="https://sitegenius.cloud/ib/ewGzIPGq52.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> E-Wallet </a>  
+            <div id="teksPDisplay"></div>
+
+
+
+
+
+
+
+</div>
+</section>
+<!-- TAB E WALLET -->
+    <div id="London" class="w3-container city" style="display:none">
+    <section class="bottom-panel">
+        
+  <a href="https://fastpediakuu.webtoko.net/digital/311662" class="link-bottom-panel">
+            <img style="padding:0px;" src="https://sitegenius.cloud/ib/AxxCOD6V6X.jpg" alt="telkomsel" class="icon-bottom-panel" style="padding:5px;" /> Listrik Bulanan </a>
+            
+              
+             <a href="https://fastpediakuu.webtoko.net/digital/311666" class="link-bottom-panel">
+            <img style="padding:0px;" src="https://sitegenius.cloud/ib/9JwXkPHOTa.jpg" alt="telkomsel" class="icon-bottom-panel" style="padding:5px;" /> Gas Negara </a>
+            
+            <a href="https://fastpediakuu.webtoko.net/digital/311659" class="link-bottom-panel">
+            <img style="padding:0px;" src="https://sitegenius.cloud/ib/9GM73ZRv7I.jpg" alt="telkomsel" class="icon-bottom-panel" style="padding:5px;" /> Tagihan BPJS </a>
+            
+            
+              
+             
+             <a href="https://fastpediakuu.webtoko.net/digital/311685" class="link-bottom-panel">
+            <img style="padding:0px;" src="https://sitegenius.cloud/ib/iXJkaltEpW.png" alt="telkomsel" class="icon-bottom-panel" style="padding:5px;" /> Tagihan PDAM </a>
+              
+             <a href="https://fastpediakuu.webtoko.net/digital/311668" class="link-bottom-panel">
+            <img style="padding:0px;" src="https://sitegenius.cloud/ib/6synrWh8k9.png" alt="telkomsel" class="icon-bottom-panel" style="padding:5px;" /> Tagihan PBB </a>
+            
+              <a href="https://fastpediakuu.webtoko.net/digital/311660" class="link-bottom-panel">
+            <img style="padding:0px;" src="https://sitegenius.cloud/ib/wfcje7lRXp.png" alt="telkomsel" class="icon-bottom-panel" style="padding:5px;" /> Tagihan Internet Bulanan</a>
+            
+              
+        
+            
+              
+            
+            
+            
+            
+
+       
+    
+</div>
+</section>
+
+
+  <div id="Solo" class="w3-container city" style="display:none">
+    <section class="bottom-panel">
+        
+      <a href="https://fastpediakuu.webtoko.net/digital/292221" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/4383d4389963b269f5b71.jpg" alt="nokos" class="icon-bottom-panel" />Nokos</a>
+
+<a href="https://fastpediakuu.webtoko.net/digital/294646" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/5fa121bf9e7d829b04063.jpg" alt="nokos" class="icon-bottom-panel" />Kebutuhan WhatsApp</a>
+
+      <a href="https://fastpediakuu.webtoko.net/digital/294652" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/27ce2a1c5918d2d8be844.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Kebutuhan Hosting </a>
+
+    <a href="https://fastpediakuu.webtoko.net/digital/298753" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/a5079aede1c23e5337ea3.jpg" alt="jasaedithtml" class="icon-bottom-panel" />Musik</a>
+
+    <a href="https://fastpediakuu.webtoko.net/digital/299762" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/d634f43aa9c40eea650d3.jpg" alt="jasaedithtml" class="icon-bottom-panel" />Save ID</a>
+            
+    <a href="https://fastpediakuu.webtoko.net/digital/301182" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/e126cbb1145c68a5502cb.jpg" alt="jasaedithtml" class="icon-bottom-panel" />Al-Qur'an</a>
+           
+        
+
+</div>
+</section>
+</div>
+
+
+
+<div class="my-box" style="padding-bottom: 15px;">
+ <div class="head-box">
+  <h5>Mitra FastPedia</h5>
+  <p>Terlengkap & Termurah</p>
+ </div>
+
+ <div class="flex text-box">
+  <div><img src="https://cdn-icons-png.flaticon.com/128/3472/3472625.png" alt=""></div>
+  <div>
+  <h5 class="fs-14 fw-bold mt-3">Mitra Resmi</h5>
+  <p class="fs-12 mt-3">Bekerja langsung dengan produsen terkemuka dunia, kami menawarkan berbagai item game dan produk hiburan</p>
+ </div>
+ </div>
+
+ <div class="flex text-box">
+  <div><img src="https://cdn-icons-png.flaticon.com/128/9610/9610479.png" alt=""></div>
+  <div>
+  <h5 class="fs-14 fw-bold mt-3">Transaksi Mudah & Aman</h5>
+  <p class="fs-12 mt-3">Transaksi Sangat mudah cukup satu saldo untuk semua transaksi,dengan keamanan Extra</p>
+ </div>
+ </div>
+
+ <div class="flex text-box">
+  <div><img src="https://cdn-icons-png.flaticon.com/128/2285/2285551.png" alt=""></div>
+  <div>
+  <h5 class="fs-12 mt-3">Pengiriman Instan</h5>
+  <p class="fs-12 mt-3">Produk akan dikirim secara instan ke nomor/akun tujuan secara cepat, kapanpun dan dimanapun</p>
+ </div>
+ </div>
+
+ <div class="flex text-box">
+  <div><img src="https://cdn-icons-png.flaticon.com/128/10439/10439779.png" alt=""></div>
+  <div>
+  <h5 class="fs-14 fw-bold mt-3">Bantuan Pelanggan</h5>
+  <p class="fs-12 mt-3">Kami Siap membantu dan menjawab semua pertanyaan maupun kendala dalam setiap transaksimu</p>
+ </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<br><br>
+
+
+
+<style>
+.jssorl-009-spin img {
+animation-name: jssorl-009-spin;
+animation-duration: 1.6s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+from {
+transform: rotate(0deg);
+}
+
+to {
+transform: rotate(300deg);
+}
+}
+
+.img-slide {
+border-radius: 30px;
+background: #fff;
+height: 31px;
+border: 5px solid aliceblue;
+padding: 10px;
+}
+.item {
+display: flex;
+margin-top: 20px;
+align-items: center;
+}
+
+.item img {
+width: 30px;
+height: 30px;
+margin-right: 15px;
+margin-left: 15px;
+}
+
+.item-text h6 {
+font-size: 14px;
+font-weight: 600;
+}
+
+.item-text p {
+font-size: 12px;
+}
+.item-text h6 {
+color: #2196F3;
+.namtage {
+float: right;
+padding-left: 15px;
+margin-top: 10px;
+font-size: 12px;
+border-bottom: 2px solid #f1f1f1;
+padding-bottom: 8px;
+}
+</style>
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+<script>
+function rubah(angka) {
+var reverse = angka.toString().split('').reverse().join(''),
+ribuan = reverse.match(/\d{1,3}/g);
+ribuan = ribuan.join('.').split('').reverse().join('');
+return "Rp " + ribuan;
+}
+document.getElementById("rumahhtmlsaldo").innerText = rubah(document.getElementById("rumahhtmlsaldo").textContent)
+function toggleBlur() {
+var blurredText = document.getElementById('rumahhtmlsaldo');
+blurredText.classList.toggle('blur');
+var icon1 = document.getElementById('icon1');
+var icon2 = document.getElementById('icon2');
+
+icon1.classList.toggle('hidden');
+icon2.classList.toggle('hidden');
+}
+</script>
+<script>
+        function aler() {
+            alert("Fitur Tahap Pengembangan!");
+        }
+        function tampilkanTeksP() {
+            var teksPDisplay = document.getElementById("teksPDisplay");
+            teksPDisplay.innerHTML = `<a href="https://fastpediakuu.webtoko.net/digital/298430" class="link-bottom-panel">
+            <img src="https://telegra.ph/file/8e1f998e12082ae39ed53.jpg" alt="jasaedithtml" class="icon-bottom-panel" /> Game </a>`;
+        }
+
+        function cekNamaUser(namaUser) {
+            var namaUserDisplay = document.getElementById("namaUserDisplay");
+            namaUserDisplay.textContent = namaUser;
+            
+            if (namaUser === "Hi, Demo123") {
+                tampilkanSembunyi();
+            } else if (namaUser === "Demo123") {
+                tampilkanTeksP();
+            } else {
+                tampilkanTeksP();
+            }
+        }
+
+        var namaUser = "Hi, {{nama_user}}";
+        cekNamaUser(namaUser);
+    </script>
+<!-- my script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+ <!-- Letakkan script dibagian paling bawah halaman -->
+    <script type="text/javascript">
+      function rubah(angka){
+        var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return "Rp "+ribuan;
+      }
+      document.getElementById("rumahhtmlsaldo").innerText=rubah(document.getElementById("rumahhtmlsaldo").textContent);
+      <script>
+    var servUrl = "https://fastpediakuu.webtoko.net"
+    function Refresh() {
+      window.location.href = servUrl + "/refresh_saldo"
+    }
+    function rubah(angka) {
+      var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+      ribuan = ribuan.join('.').split('').reverse().join('');
+      return "Rp" + ribuan;
+    }
+    document.getElementById("rumahhtmlsaldo").innerText = rubah(document.getElementById("rumahhtmlsaldo").textContent);
+  </script>
+      <script type="text/javascript">
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+        function checkRefreshAndRedirect() {
+            var refreshed = sessionStorage.getItem('refreshed');
+            if (!refreshed) {
+                sessionStorage.setItem('refreshed', 'true');
+            } else {
+                var url = "https://fastpediakuu.webtoko.net/refresh_saldo";
+                redirectTo(url);
+                sessionStorage.removeItem('refreshed');
+            }
+        }
+        window.onload = checkRefreshAndRedirect;
+    </script>
+     <!-- Letakkan script dibagian paling bawah halaman -->
+    <script type="text/javascript">
+      function rubah(angka){
+        var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return ""+ribuan;
+      }
+      document.getElementById("rumahhtmlpoin").innerText=rubah(document.getElementById("rumahhtmlpoin").textContent);
+
+            }
+    </script>
+  <script>
+fetch('/api/me')
+  .then(res => res.json())
+  .then(data => {
+    if (!data.status) {
+      window.location.href = '/login.html';
+      return;
+    }
+
+    document.getElementById('namaUserDisplay').innerText = 'Hi, ' + data.user.nama;
+    document.getElementById('rumahhtmlsaldo').innerText = rubah(data.user.saldo);
+    document.getElementById('rumahhtmlpoin').innerText = data.user.poin;
+  })
+  .catch(() => {
+    window.location.href = '/login.html';
+  });
+  </script>
+    <!--  slide -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+</body>
+  </html>
