@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
+:root {
+    --color-one: #59ABFF;
+    --color-two: #057ed1;
+    --animate-duration: 200ms;
+    --font-jakarta: "Plus Jakarta Sans", verdana;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background: var(--color-one);
+    border-bottom-left-radius: 100% 30%;
+    border-bottom-right-radius: 100% 30%;
+}
+
+header .card-bg {
+    opacity: 0.2;
+    width: 200px;
+    height: 200px;
+    right: -20px;
+    rotate: 60deg;
+    margin-top: 35px;
+    position: absolute;
+    border-radius: 16px;
+    background: var(--color-two);
+    animation: up-down 3s ease-in-out infinite;
+}
+
+header h3 {
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-family: var(--font-jakarta);
+}
+
+header p {
+    color: white;
+    margin-top: 7px;
+    font-size: 12px;
+    text-align: center;
+    font-family: var(--font-jakarta);
+}
+
+.container {
+    z-index: 1;
+    padding: 20px;
+    margin-top: -120px;
+    position: relative;
+}
+
+.main {
+    padding: 20px;
+    overflow: hidden;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+}
+
+.main .button-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    border: 1.5px solid #eee;
+}
+
+
+.main .button-page a {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #eeeeee;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 30px;
+    background: transparent;
+}
+
+.main .button-page a {
+    padding: 10px;
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+.main .button-page a.active {
+    color: white;
+    background-color: var(--color-one);
+}
+
+form {
+    margin-top: 15px;
+}
+
+form .input {
+    margin-bottom: 13px;
+}
+
+form .input p {
+    font-size: 13px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-family: var(--font-jakarta)
+}
+
+form .input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 13px;
+    border-radius: 10px;
+    background: #f3f3f3;
+}
+
+form button {
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 30px;
+    border-radius: 30px;
+    background: var(--color-one)
+}
+
+form .with {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+form .with hr {
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #eeeeee;
+}
+
+form .with span {
+    color: #e4e4e4;
+    padding: 0 10px;
+    font-size: 20px;
+    margin-top: -13px;
+    background: white;
+}
+
+.forgot-password {
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--color-one);
+}
+
+.google {
+    column-gap: 10px;
+    width: 100%;
+    padding: 8px;
+    color: var(--color-one);
+    display: flex;
+    margin-top: 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eeeeee;
+}
+
+.google img {
+    width: 27px;
+    height: 27px;
+}
+
+@keyframes up-down {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="card-bg"></div>
+        <h3>Daftar</h3>
+        <p>sign up untuk daftar akun baru</p>
+    </header>
+    <div class="container">
+        <div class="main">
+            <div class="button-page">
+                <a href="https://olshop.com/akun/login/">Sign in</a>
+                <a class="active">Sign up</a>
+            </div>
+            <form method="GET" action="https://olsh/akun/start_daftar/">
+                <div class="input">
+                    <p>Nama</p>
+                    <input type="text" placeholder="Linpay" name="nama_lengkap" required>
+                </div>
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" placeholder="×××××@gmail.com" name="email" required>
+                </div>
+                <div class="input">
+                    <p>Nomor</p>
+                    <input type="number" placeholder="08×× ×××× ××××" name="nomor_hp" required>
+                </div>
+                <div class="input">
+                    <p>Password</p>
+                    <input type="password" placeholder="" name="password" required>
+                </div>
+                
+                <button type="submit">Sign up</button>
+                <div class="with">
+                    <hr>
+                    <span>or</span>
+                </div>
+                
+                <a href="https://olshop.com/akun/login_dengan_google/" class="google">
+                    <img src="https://apikita.xyz/assets/image/google-1.png" alt="" />
+                    <h4>Google</h4>
+                </a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
