@@ -9,6 +9,11 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 const PORT = settings.port
+
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/register.html'));
+});
+
 app.post("/api/register", async (req, res) => {
     const { nama, email, nomor, password } = req.body;
 
