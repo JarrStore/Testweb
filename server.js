@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const settings = require("./settings");
 const mysql = require("mysql2/promise");
 const mongoose = require("mongoose");
-const path = reuqire("path")
+const path = require("path")
 
 const app = express();
 app.use(express.json());
