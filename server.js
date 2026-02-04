@@ -40,6 +40,8 @@ app.post("/api/register", async (req, res) => {
             email,
             nomor,
             password: hashed,
+            saldo: 0,
+            poin: 0,
             created_at: Date.now()
         });
 
@@ -60,8 +62,8 @@ app.post("/api/register", async (req, res) => {
         }
 
         await db.execute(
-            "INSERT INTO users (nama, email, nomor, password) VALUES (?, ?, ?, ?)",
-            [nama, email, nomor, hashed]
+            "INSERT INTO users (nama, email, nomor, password, saldo, poin) VALUES (?, ?, ?, ?,?,?)",
+            [nama, email, nomor, hashed, 0,0]
         );
     }
 
@@ -74,6 +76,8 @@ app.post("/api/register", async (req, res) => {
             email: String,
             nomor: String,
             password: String,
+            saldo: 0,
+            poin: 0,
             created_at: Number
         }));
 
@@ -87,6 +91,8 @@ app.post("/api/register", async (req, res) => {
             email,
             nomor,
             password: hashed,
+            saldo: 0,
+            poin: 0,
             created_at: Date.now()
         });
     }
