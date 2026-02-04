@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json());
 app.use(express.static("public"));
-
+const PORT = settings.port
 app.post("/api/register", async (req, res) => {
     const { nama, email, nomor, password } = req.body;
 
@@ -86,4 +86,7 @@ app.post("/api/register", async (req, res) => {
     }
 
     res.json({ status: true });
+});
+app.listen(PORT, () => {
+    console.log(chalk.bgHex('#90EE90').hex('#333').bold(` Server is running on port ${PORT} `));
 });
