@@ -1,4 +1,5 @@
 module.exports = {
+    port: 3000,
     storage: "mongodb", // "json" | "mysql" | "mongodb"
 
     mysql: {
